@@ -81,7 +81,12 @@
       Self-motivated and highly reliable university student positioned to contribute strongly to customer service operations demanding tact, enthusiasm, and an exemplary work ethic.</br>
       Born in Karnataka and did schooling in Mumbai. Presently pursuing M.Tech in CSE at NITK.
       <br>
-      In this exercise, the idea is to write a paragraph<br> that would be a random passage from a story. An effective paragraph is one that has unity (it isn't a hodgepodge of things),<br> focus (everything in the paragraph stacks up to the whatever-it-is the paragraph is about), and coherence (the content follows smoothly)
+      Motivated. Passionate. Curious.<br>
+      I am currently pursuing a Masters degree in Computer Science from
+      National Institute of Technology, Karnataka(NITK) and trying to explore the vast
+      field of Computer Science as much as possible.  I have completed my B.Tech from the University of Mumbai.
+      I have worked both as a part of a team and individually to get the task completed.<br>
+      As hobbies I pursue sketching and play badminton. My newly found addiciton in browsing quora.<br>
       <br>
 
       <!-- start  -->
@@ -98,31 +103,12 @@
       <!-- end -->
 
         <div class="btwrap">
-          <a href="CV.pdf"  download target="_blank" class="resa"><button class="btn">Resume</button></a>
+          <a href="{% static 'Download/CV.pdf' %}"  download target="_blank" class="resa"><button class="btn">Resume</button></a>
         </div>
 
   </div>
   </div>
 
-  <!-- Blog -->
-  <div class="bloger">
-  <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        <p>published: {{ post.published_date }}</p>
-                    </div>
-                    <h2><a href="">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-</div>
-  <!-- blog end -->
 
   <div class="section3" id="sec3">
     <div class="seconder">Education</div><div class="sml2"></div>
@@ -217,6 +203,30 @@ people face shortage of food(orphanages). The application was developed in Andro
     </div>
 
     </div>
+
+    <!-- blog start  -->
+    <!-- Blog -->
+    <div class="bloger">
+      <div class="seconder">Blog</div><div class="sml1"></div>
+      <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for post in posts %}
+                    <div class="post">
+                        <div class="date">
+                            <p>published: {{ post.published_date }}</p>
+                        </div>
+                        <h2><a href="">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- blog end -->
+
+    <!-- blog end -->
 
     <div class="section2 contac" id="sec6">
       <div class="firster">Contact</div><div class="sml1"></div>

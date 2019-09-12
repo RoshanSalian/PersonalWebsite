@@ -78,7 +78,7 @@ a.effect-shine:hover {
 }
 
 .post{
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .post h2 a, .post h2 a:visited {
@@ -256,10 +256,10 @@ ul.timeline > li:before {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 70px;
+  width: 60px;
   text-align: center;
   text-decoration: none !important;
-  margin: 5px 2px;
+  margin: 15px 12px;
   border-radius: 50%;
 }
 
@@ -471,6 +471,7 @@ a.portfolio-link {
 
 .bloger{
   background-color: white;
+  padding: 30px;
 }
 
 .section3{
