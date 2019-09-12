@@ -465,6 +465,7 @@ a.portfolio-link {
   padding-bottom: 40px;
   height: auto;
   background-color: orange;
+  width: 100%;
   /* padding-top: 20px */
 }
 
@@ -478,6 +479,7 @@ a.portfolio-link {
   height: auto;
   background-color: #000000;
   color: #ffffff;
+  width: 100%;
 }
 
 .text1{
