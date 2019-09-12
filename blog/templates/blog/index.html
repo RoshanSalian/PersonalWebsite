@@ -1,18 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <!-- API tocken: 882cb033eadce5ff4a4b8aa2b509ea29e1b909b7 -->
   <title>Roshan Salian</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="{% static 'css/script.js' %}"></script>
 
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="scripts/script.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href=".static/css/style.css"> -->
+  <!-- <script src="scripts/script.js"></script> -->
 
 <!--
   <ttext> for all text
@@ -69,23 +77,12 @@
   <div class="section2" id="sec2">
     <div class="firster">About</div><div class="sml1"></div>
     <div class="text1">
-    <p><img src="file:///home/roshan/Desktop/Web/images/download.png">
+    <p><img src="{% static "css/download.png" %}">
       Self-motivated and highly reliable university student positioned to contribute strongly to customer service operations demanding tact, enthusiasm, and an exemplary work ethic.</br>
       Born in Karnataka and did schooling in Mumbai. Presently pursuing M.Tech in CSE at NITK.
       <br>
       In this exercise, the idea is to write a paragraph<br> that would be a random passage from a story. An effective paragraph is one that has unity (it isn't a hodgepodge of things),<br> focus (everything in the paragraph stacks up to the whatever-it-is the paragraph is about), and coherence (the content follows smoothly)
       <br>
-
-        <div>
-          {% for post in posts %}
-          <div>
-            <p>published: {{post.published_date}}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-          </div>
-          {% endfor %}
-    </div>
-
 
       <!-- start  -->
 
@@ -105,6 +102,26 @@
         </div>
 
   </div>
+
+  <!-- Blog -->
+  <div class="bloger">
+  <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>published: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+  <!-- blog end -->
 
   <div class="section3" id="sec3">
     <div class="seconder">Education</div><div class="sml2"></div>
