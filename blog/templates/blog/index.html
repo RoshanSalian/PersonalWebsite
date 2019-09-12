@@ -74,7 +74,17 @@
       Born in Karnataka and did schooling in Mumbai. Presently pursuing M.Tech in CSE at NITK.
       <br>
       In this exercise, the idea is to write a paragraph<br> that would be a random passage from a story. An effective paragraph is one that has unity (it isn't a hodgepodge of things),<br> focus (everything in the paragraph stacks up to the whatever-it-is the paragraph is about), and coherence (the content follows smoothly)
-      </div>
+      <br>
+
+        <div>
+          {% for post in posts %}
+          <div>
+            <p>published: {{post.published_date}}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+          {% endfor %}
+    </div>
 
 
       <!-- start  -->
